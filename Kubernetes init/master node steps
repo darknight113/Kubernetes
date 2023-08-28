@@ -79,6 +79,8 @@ yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 systemctl enable kubelet
 systemctl start kubelet
 #####################
+### Install the iptable tc package###
+dnf install -y iproute-tc
 
 swapoff -a
 kubeadm init 
